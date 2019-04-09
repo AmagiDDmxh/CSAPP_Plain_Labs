@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-04-06 Sat 14:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<p>
+#####################################################################
+</p>
+
+<p>
+######################################################################
+</p>
+
+<p>
+This directory contains the files that you will need to run the CS:APP
+Data Lab, which helps develops the student's understanding of bit
+representations, two's complement arithmetic, and IEEE floating point.
+</p>
+
+<p>
+For fun, we've also provided a new user-level HTTP-based "Beat the
+Prof" contest that replaces the old email-based version. The new
+contest is completely self-contained and does not require root
+password.  The only requirement is that you have a user account on a
+Linux machine with an IP address.
+</p>
+
+<p>
+System requirements: Uses bison and flex to build dlc.
+</p>
+
+<p>
+<b><b><b><b><b>**</b></b></b></b></b>
+</p>
+<ol class="org-ol">
+<li>Overview</li>
+</ol>
+<p>
+<b><b><b><b><b>**</b></b></b></b></b>
+</p>
+
+<p>
+In this lab, students work on a C file, called bits.c, that consists
+of a series of programming "puzzles".  Each puzzle is an empty
+function body that must be completed so that it implements a specified
+mathematical function, such as "absolute value". Students must solve
+the non-floating point puzzles using only straight-line C code and a
+restricted set of C arithmetic and logical operators. For the
+floating-point puzzles they can use conditionals and arbitrary
+operators.
+</p>
+
+<p>
+Students use the following three tools to check their work.
+Instructors use the same tools to assign grades.
+</p>
+
+<ol class="org-ol">
+<li>dlc: A "data lab compiler" that checks each function in bits.c for</li>
+</ol>
+<p>
+compliance with the coding guidelines, checking that the students use
+less than the maximum number of operators, that they use only
+straight-line code, and that they use only legal operators. The
+sources and a Linux binary are included with the lab.
+</p>
+
+<ol class="org-ol">
+<li>btest: A test harness that checks the functions in bits.c for</li>
+</ol>
+<p>
+correctness. This tool has been significantly improved, now checking
+wide swaths around the edge cases for integers and floating point
+representations such as 0, Tmin, denorm-norm boundary, and inf.
+</p>
+
+<ol class="org-ol">
+<li>driver.pl: A autograding driver program that uses dlc and btest to</li>
+</ol>
+<p>
+check each test function in bits.c for correctness and adherence to
+the coding guidelines
+</p>
+
+<p>
+The default version of the lab consists of 15 puzzles, in
+./src/selections.c, chosen from a set of 73 standard puzzles defined
+in the directory ./src/puzzles/. You can customize the lab from term
+to term by choosing a different set of puzzles from the standard set
+of puzzles.
+</p>
+
+<p>
+You can also define new puzzles of your own and add them to the
+standard set. See ./src/README for instructions on how to add new
+puzzles to the standard set.
+</p>
+
+<p>
+NOTE: If you define new puzzles, please send them to me (Dave
+O'Hallaron, droh@cs.cmu.edu) so that I can add them to the standard
+set of puzzles in the data lab distribution.
+</p>
+
+<p>
+<b><b><b>**</b></b></b>
+</p>
+<ol class="org-ol">
+<li>Files</li>
+</ol>
+<p>
+<b><b><b>**</b></b></b>
+</p>
+
+<p>
+All CS:APP labs have the same simple top-level directory structure:
+</p>
+
+<p>
+Makefile	   Builds the entire lab.
+README		   This file.
+src/		   Contains all source files for the lab.
+datalab-handout/   Handout directory that goes to the students. Generated
+		   by the Makefile from files in ./src. Never modify anything
+		   in this directory. 
+grade/		   Autograding scripts that instructors can use to 
+		   grade student handins.
+writeup/	   Sample Latex lab writeup.
+contest/           Everything needed for the optional "Beat the Prof" contest.
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b>
+</p>
+<ol class="org-ol">
+<li>Building the Lab</li>
+</ol>
+<p>
+<b><b><b><b><b><b><b><b><b>*</b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+Step 0. If you decide to run the "Beat the Prof" contest (section 5),
+then edit the ./contest/Contest.pm file so that the driver knows where
+to send the results. See ./contest/README for the simple
+instructions. If you decide <b>not</b> to offer the contest, then do
+nothing in this step.
+</p>
+
+<p>
+Step 1. Select the puzzles you want to include by editing the file
+./src/selections.c.
+</p>
+
+<p>
+The default ./src/selections.c comes from a previous instance of the
+Data Lab at CMU.  The file ./src/selections-all.c contains the
+complete list of puzzles to choose from.
+</p>
+
+<p>
+Step 2. Modify the Latex lab writeup in ./writeup/datalab.tex to 
+tailor it for your course. 
+</p>
+
+<p>
+Step 3. Type the following in the current directory:
+     unix&gt; make clean
+     unix&gt; make 
+</p>
+
+<p>
+The Makefile generates the btest source files, builds the dlc binary
+(if necessary), formats the lab writeup, and then copies btest, the
+dlc binary, and the driver to the handout directory.  After that, it
+builds a tarfile of the handout directory (in ./datalab-handout.tar)
+that you can then hand out to students.
+</p>
+
+<p>
+Note on Binary Portability: dlc is distributed in the datalab-handout
+directory as a binary. Linux binaries are not always portable across
+distributions due to different versions of dynamic libraries. You'll
+need to be careful to compile dlc on a machine that is compatible with
+those that the students will be using.
+</p>
+
+<p>
+Note: Running "make" also automatically generates the solutions to the
+puzzles, which you can find in ./src/bits.c and ./src/bits.c-solution.
+</p>
+
+
+<p>
+<b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b>
+</p>
+<ol class="org-ol">
+<li>Grading the Lab</li>
+</ol>
+<p>
+<b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+There is a handy autograder script that automatically grades your
+students' handins.  See ./grade/README for instructions.
+</p>
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+<ol class="org-ol">
+<li>"Beat the Prof" Contest</li>
+</ol>
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b>**</b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+For fun, we've included an optional "Beat the Prof" contest, where
+students compete against themselves and the instructor. The goal is to
+solve each Data Lab puzzle using the fewest number of
+operators. Students who match or beat the instructor's operator count
+for each puzzle are winners. See ./contest/README for the simple
+instructions on how to set up the contest.
+</p>
+
+<p>
+NOTE: The contest is completely optional. Whether you decide to
+offer it or not has no affect on how you build and distribute the lab.
+</p>
+
+<p>
+NOTE: If you do decide to offer the contest, then you should configure
+the contest <b>before</b> you build the lab, so that the driver knows the
+server and port to send the contest results of each student (using the
+constants defined in the ./src/Driverhdrs.pm file, which is
+autogenerated from the ./contest/Contest.pm config file).
+</p>
+
+<p>
+If you decide to offer the contest <b>after</b> you've built and handed out
+the lab to the students, you're still OK:
+</p>
+
+<ol class="org-ol">
+<li>Configure the contest as described in contest/Makefile</li>
+
+<li>Rebuild the lab in the usual way:
+linux&gt; cd datalab
+linux&gt; make</li>
+
+<li>Distribute the new ./src/Driverhdrs.pm file to the students.</li>
+</ol>
+
+
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b>*</b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+<ol class="org-ol">
+<li>Experimental BDD checker</li>
+</ol>
+<p>
+<b><b><b><b><b><b><b><b><b><b><b><b><b>*</b></b></b></b></b></b></b></b></b></b></b></b></b>
+</p>
+
+<p>
+For fun, we have included an experimental correctness checker based on
+binary decision diagrams (BDDs) (R. E. Bryant, IEEE Transactions on
+Computers, August, 1986) that uses the CUDD BDD package from the
+University of Colorado. The BDD checker does an exhaustive test of the
+test functions in bits.c, formally verifying the correctness of each
+test function against a reference solution for <b>ALL</b> possible input
+values. For functions that differ from the reference solution, the BDD
+checker produces a counterexample in the form of a set of function
+arguments that cause the test solution to differ from the reference
+solution.
+</p>
+
+<p>
+The sources are included in ./src/bddcheck. To compile:
+</p>
+
+<p>
+unix&gt; cd src/bddcheck
+unix&gt; make clean
+unix&gt; make
+</p>
+
+<p>
+To use BDDs to check ./src/bits.c for correctness:
+</p>
+
+<p>
+unix&gt; cd src
+unix&gt; ./bddcheck/check.pl     # with error messages and counterexamples
+unix&gt; ./bddcheck/check.pl -g  # compact tabular output with no error messages
+</p>
+
+<p>
+Note that check.pl must be run from the parent directory of ./bddcheck.
+</p>
+
+<p>
+We've been using this BDD checker instead of btest at CMU for several
+years and the code appears to be stable. The main weakness is in the
+Perl code that extracts the functions from bits.c. It usually works,
+but some things &#x2013; such as calls to other functions, or functions that
+don't end with a single brace &#x2013; confuse it. So we're reluctant to
+make it the default checker for the distributed CS:APP labs. However,
+if you have any questions about the correctness of a particular
+solution, then this is the authoritative way to decide.
+</p>
+
+<p>
+Please send any comments about the BDD checker to randy.bryant@cs.cmu.edu.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2019-04-06 Sat 14:24</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
